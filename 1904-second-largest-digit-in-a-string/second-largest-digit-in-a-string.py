@@ -1,18 +1,23 @@
 class Solution:
     def secondHighest(self, s: str) -> int:
-        digits=set()
-        
+        highest=sec_high=-1
+
         for char in s:
             if char.isdigit():
                 digit=int(char)
-                digits.add(digit)
+            
+                if digit>highest:
+                    highest,sec_high=digit,highest
+                elif sec_high<digit<highest:
+                    sec_high=digit
+            
 
-        if len(digits)<2:
-            return -1
-        
-        digits=sorted(digits)
-        return digits[-2]
-        
+        return sec_high
+
+      
+     
+
+                
 
 
         
