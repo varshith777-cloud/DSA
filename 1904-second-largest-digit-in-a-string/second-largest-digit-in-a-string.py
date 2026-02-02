@@ -7,9 +7,6 @@ class Solution:
                 digit=int(char)
                 digits.add(digit)
 
-
-            
-        
         if len(digits)<2:
             return -1
         
