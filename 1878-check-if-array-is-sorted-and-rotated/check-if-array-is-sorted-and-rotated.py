@@ -1,18 +1,14 @@
 class Solution:
     def check(self, nums: List[int]) -> bool:
-        count=0
 
+        sorted_arr=sorted(nums)
 
         for i in range(len(nums)):
+            ele=nums.pop()
+            nums.insert(0,ele)    
+            if nums==sorted_arr:
+                return True
 
-            if nums[i]>nums[(i+1)%len(nums)]:
-                count+=1
-            else:
-                pass
-        
-        if count>1:
-            return  False
-        else:
-            return True
+        return False
 
             
