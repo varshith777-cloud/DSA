@@ -17,23 +17,23 @@ class Solution:
 
                 if L[i]<R[j]:
                     nums[k]=L[i]
-                    k+=1
                     i+=1
                 
                 else:
                     nums[k]=R[j]
-                    k+=1
                     j+=1
+                k+=1
 
             while i<len(L):
 
                 nums[k]=L[i]
                 i+=1
                 k+=1
-
+    
             while j<len(R):
                 nums[k]=R[j]
                 j+=1
+            
                 k+=1
 
         return nums
